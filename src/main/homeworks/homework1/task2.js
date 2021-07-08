@@ -134,13 +134,16 @@ const planets = {
 
 // update only this function
 function extractSmallPlanets(planetsObject, boundaryValue) {
-  return [];
+  return planetsObject.results.filter(planet => planet.diameter <= boundaryValue);
 }
 
 // update only this function
 function extractBigPlanets(planetsObject, boundaryValue) {
-  return [];
+  return planetsObject.results.filter(planet => planet.diameter > boundaryValue);
 }
+
+extractSmallPlanets(planets, 10000);
+extractBigPlanets(planets, 10000);
 
 module.exports = {
   planets,
