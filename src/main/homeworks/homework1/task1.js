@@ -10,8 +10,13 @@ const text = 'photo=[{\\"markers_restarted\\":true,\\"photo\\":\\"3b1a5b41d7:y\\
 
 // update only this function
 function updateText(textToSplit, separator) {
-  return '';
+  let updatedText = textToSplit.split(separator);
+  console.log((updatedText.length) - 1);
+  updatedText = updatedText.join('');
+  return updatedText;
 }
+
+console.log(updateText(text, '\\'));
 
 module.exports = {
   text,
