@@ -8,13 +8,7 @@ const names2 = ['Dima', 'Ivan', 'Kate'];
 
 // update only this function
 function findInterception(arr1, arr2) {
-  let repeatedNames = [];
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr2.includes(arr1[i])) {
-        repeatedNames.push(arr1[i])
-      }
-  }
-  return repeatedNames;
+  return arr1.filter(name => arr2.includes(name));
 }
 
 findInterception(names1, names2);
